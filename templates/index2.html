@@ -1,3 +1,4 @@
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
@@ -8,32 +9,32 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'credentials/bootstrap/css/bootstrap.min.css'%}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{% static 'credentials/dist/css/AdminLTE.min.css'%}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{% static 'credentials/dist/css/skins/_all-skins.min.css'%}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/iCheck/flat/blue.css'%}">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/morris/morris.css'%}">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/jvectormap/jquery-jvectormap-1.2.2.css'%}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/datepicker/datepicker3.css'%}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/daterangepicker/daterangepicker-bs3.css'%}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{% static 'credentials/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'%}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!--[if lt IE 9]-->
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -83,16 +84,16 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="#" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Shantanu Bharadwaj</span>
+                  <img src="{% static "credentials/dist/img/sagarpro.jpg" %}" class="user-image" alt="User Image">
+                  <span class="hidden-xs">SAGAR</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="#" class="img-circle" alt="User Image">
+                    <img src="{% static "credentials/dist/img/sagarpro.jpg" %}" class="img-circle" alt="UserImage">
                     <p>
-                      Shantanu Bharadwaj - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      SAGAR-ASHISH
+                      <small>Web Developer</small>
                     </p>
                   </li>
                   
@@ -122,14 +123,14 @@
               <img src="#" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Shantanu Bharadwaj</p>
+              <p>SAGAR-ASHISH</p>
               
             </div>
           </div>
           <!-- search form -->
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <input type="text" name="q" class="form-control" placeholder="what u wanna know...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -244,7 +245,7 @@
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <h2>53<sup style="font-size: 20px">%</sup></h2>
                 <p> Placements till now </p>
                 </div>
                 <div class="icon">
@@ -257,7 +258,7 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>53</h3>
+                  <h1>53</h1>
                   <p>UG Placed</p>
                 </div>
                 <div class="icon">
@@ -285,62 +286,8 @@
           <div class="row">
             <!-- Left col -->
             <section class="col-lg-12 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <div>
-                <table>
-              <tbody><tr>
-                <td align="center"><b>Announcements</b>
-                </td>
-              </tr>
-              <tr>
-                <td><ul>
 
 
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/register_students" align="center"> List of Registered Students January-May 2016 </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/HSSAllocationJanMay2016.htm"> HSS elective Allocation for January May 2016 semester </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-<li><font size="2"><a href="http://www.iitg.ernet.in/acad/Notice/notice guidelines.pdf"> Guidelines for submitting appeals by students liable to be terminated after conclusion of July November 2015 semester </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-<li><font size="2"><a href="http://www.iitg.ernet.in/acad/Notice/notice terminated.pdf"> List of students liable to be terminated after conclusion of July November 2015 semester </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-
-
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/PhDDebarredStudentsJanMay2016.htm"> List of PhD students debarred from registering January May 2016 semester </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/LateandAbsentiaRegistration.pdf"> Notice : Regarding (i) Late Registration (ii) In-absentia Registration for January May 2016 semester </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/jan2016courses/coursesjan2016.html"> List of Courses Offered in Even Semesters of AY 2015-2016  </a><img height="10" alt="new1.gif (2364 bytes)" src="http://shilloi.iitg.ernet.in/~acad/intranet/new1.gif" width="26"></font>
-  </li>
-
-<li><font size="2"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/tt/Groupings2015.htm">Class Divisions, Lab Groups and Tutorial Groups of First Year B.Tech./B.Des. (2015 Batch)  </a></font></li>
-
-<li><font size="4"><a href="http://shilloi.iitg.ernet.in/~acad/intranet/PM_Fellows_in_recent_years.pdf">Call for Prime Minister's Fellowship 
-  </a></font></li>
-
-
-
-</ul>
-
-
-                </td>
-              </tr>
-            </tbody></table>
-               
-                
-                
-              </div>
-
-              
-
-              
 
               <!-- quick email widget -->
               <div class="box box-info" >
