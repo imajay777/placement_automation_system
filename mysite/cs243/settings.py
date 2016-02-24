@@ -56,7 +56,7 @@ ROOT_URLCONF = 'cs243.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Sagar Roy Prodhan/Desktop/templates/'],
+        'DIRS': ['C:/Users/Sagar Roy Prodhan/Desktop/cs243/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

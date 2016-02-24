@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from cs243.view import login,index2
+from cs243.view import login,index2,studentprofile
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
      url(r'^login/$', login),
       url(r'^index2/$', index2),
+       url(r'^studentprofile/$', studentprofile),
 ]
