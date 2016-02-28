@@ -18,5 +18,11 @@ class company(models.Model):
     email=models.CharField(max_length=20)
     mobile=models.IntegerField()    
     
-    
+class contact(models.Model):
+    email=models.CharField(max_length=20)
+    mobile=models.IntegerField()
+    temporary_address=models.CharField(max_length=20)
+    permanent_address=models.CharField(max_length=20)
+    website=models.CharField(max_length=20)
+   
     

@@ -15,11 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from cs243.view import login,index2,studentprofile
+from cs243.view import login,index2,studentprofile,photo,contact,postgrad,undergrad,srsec,sec,internships,languages,projects
+from credentials.views import contact
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
      url(r'^login/$', login),
       url(r'^index2/$', index2),
        url(r'^studentprofile/$', studentprofile),
+        url(r'^photo/$', photo),
+          url(r'^postgrad/$', postgrad),
+          url(r'^undergrad/$', undergrad),
+          url(r'^srsec/$', srsec),
+          url(r'^sec/$', sec),
+          url(r'^internships/$', internships),
+          url(r'^languages/$', languages),
+          url(r'^contact/$', contact),
+          url(r'^projects/$', projects),
+          
 ]

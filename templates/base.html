@@ -98,7 +98,7 @@
                   
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="/studentprofile/" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="/login/" class="btn btn-default btn-flat">Sign out</a>
@@ -147,20 +147,18 @@
              
             </li>
             <li class="treeview">
-              <a href="/photo/">
+             <a href="/photo/">
                 <i class="fa fa-camera"></i>
                 <span>Photo</span>
                 
               </a>
             
             </li>
-            <li class="treeview">
+            <li>
               <a href="/contact/">
-               <i class="fa fa-info"></i>
-                <span>Contact</span> 
+                <i class="fa fa-info"></i> <span>Contact</span> 
               </a>
             </li>
-            
             <li class="treeview">
               <a href="/education/">
                 <i class="fa fa-university"></i>
@@ -168,17 +166,17 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="postgrad"><i class="fa fa-circle-o"></i>Post-Graduation</a></li>
-                <li><a href="undergrad"><i class="fa fa-circle-o"></i>Graduation</a></li>
-                <li><a href="srsec"><i class="fa fa-circle-o"></i>Sr. Secondary</a></li>
-                <li><a href="sec"><i class="fa fa-circle-o"></i>Secondary</a></li>
+                <li><a href="/postgrad/"><i class="fa fa-circle-o"></i>Post-Graduation</a></li>
+                <li><a href="/undergrad/"><i class="fa fa-circle-o"></i>Graduation</a></li>
+                <li><a href="/srsec/"><i class="fa fa-circle-o"></i>Sr. Secondary</a></li>
+                <li><a href="/sec/"><i class="fa fa-circle-o"></i>Secondary</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i>Certification</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="/internships/">
                 <i class="fa fa-graduation-cap"></i>
-                <span>Internships</span>
+                <span>Internship</span>
                 
               </a>
               
@@ -193,7 +191,7 @@
             
             <li>
               <a href="/projects/">
-                <i class="fa fa-file"></i> <span>Project</span>
+                <i class="fa fa-file"></i> <span>Projects</span>
                 
               </a>
             </li>
@@ -221,12 +219,24 @@
         <!-- /.sidebar -->
       </aside>
 
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        
+
+        <!-- Main content -->
+        <section class="content">
+{%block content%}{%endblock%}
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+
 <!--- footer starts here -->
 <footer class="main-footer">
-         
+        
         <strong>Copyright &copy; 2014-2015 <a href="#">IIT Guwahati</a>.</strong> All rights reserved.
       </footer>
-   
+
+    
 
     <!-- jQuery 2.1.4 -->
     <script src={% static "credentials/plugins/jQuery/jQuery-2.1.4.min.js" %} type="text/javascript"></script>
