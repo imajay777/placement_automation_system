@@ -24,10 +24,10 @@ def photo(request):
     p=t.render(Context({}))
     return HttpResponse(p)
 
-def contact(request):
-    t=get_template("contact.html")
-    p=t.render(Context({}))
-    return HttpResponse(p)
+# def contact(request):
+#     t=get_template("contact.html")
+#     p=t.render(Context({}))
+#     return HttpResponse(p)
 
 def postgrad(request):
     t=get_template("postgrad.html")
@@ -49,10 +49,10 @@ def undergrad(request):
     p=t.render(Context({}))
     return HttpResponse(p)
 
-def internships(request):
-    t=get_template("internships.html")
-    p=t.render(Context({}))
-    return HttpResponse(p)
+# def internships(request):
+#     t=get_template("internships.html")
+#     p=t.render(Context({}))
+#     return HttpResponse(p)
 
 def languages(request):
     t=get_template("languages.html")

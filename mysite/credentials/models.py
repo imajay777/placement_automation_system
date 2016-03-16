@@ -20,9 +20,14 @@ class company(models.Model):
     
 class contact(models.Model):
     email=models.CharField(max_length=20)
-    mobile=models.IntegerField()
+    mobile=models.IntegerField(null=True)
     temporary_address=models.CharField(max_length=20)
-    permanent_address=models.CharField(max_length=20)
+    permanent_address=models.CharField(max_length=20,null=True)
     website=models.CharField(max_length=20)
    
-    
+class internships(models.Model):
+    email=models.CharField(max_length=20)
+    field1=models.CharField(max_length=200,null=True)
+    field2=models.CharField(max_length=200)
+    field3=models.CharField(max_length=200,null=True)
+    #website=models.CharField(max_length=20)    

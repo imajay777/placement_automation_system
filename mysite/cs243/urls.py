@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from cs243.view import login,index2,studentprofile,photo,contact,postgrad,undergrad,srsec,sec,internships,languages,projects
-from credentials.views import contact
+from cs243.view import login,index2,studentprofile,photo,postgrad,undergrad,srsec,sec,languages,projects
+from credentials.views import internships,contact,language
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,5 +32,6 @@ urlpatterns = [
           url(r'^languages/$', languages),
           url(r'^contact/$', contact),
           url(r'^projects/$', projects),
+          url(r'^language/(?P<language>[a-z\-]+)/$', language),
           
 ]
