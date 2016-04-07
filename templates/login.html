@@ -34,18 +34,18 @@
 						<div id="student" class="tab active">
 							<h1 class="title">Student Login</h1>
 						 
-							  
-							  <form action="/index2/">{%csrf_token%}
+							  {%block content%}{%endblock%}
+							  <form action="/auth/" method="post">{%csrf_token%}
 
 								<div class="input-box">
-								
-									<input type="text" id="stuser" required="required"/>
-									<label for="stuser">Student's Username</label>
+								<!--dont forget to put the method and name attribute in forms-->
+									<input type="text" name="username" id="username" required="required"/>
+									<label for="username">Student's Username</label>
 									<div class="bar"></div>
 								</div>
 								<div class="input-box">
-									<input type="password" id="stuPass" required="required"/>
-									<label for="stuPass">Password</label>
+									<input type="password" name="password" id="password" required="required"/>
+									<label for="password">Password</label>
 									<div class="bar"></div>
 								</div>
 								<div class="button-box">
@@ -53,7 +53,7 @@
 								</div>
 								<div class="base">
 									<a href="#" class="forgot">Forgot your password?</a>
-									<a href="#" class="signup">Sign Up</a>
+									<a href="/register/" class="signup">Sign Up</a>
 						
 								</div>
 							</form>

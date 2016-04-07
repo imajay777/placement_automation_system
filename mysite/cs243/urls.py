@@ -33,5 +33,11 @@ urlpatterns = [
           url(r'^contact/$', contact),
           url(r'^projects/$', projects),
           url(r'^language/(?P<language>[a-z\-]+)/$', language),
+          url(r'^auth/$', 'cs243.view.auth_view'),
+          url(r'^invalid/$', 'cs243.view.invalid_login'),
+          url(r'^loggedin/$', 'cs243.view.loggedin'),
+          url(r'^register/$', 'cs243.view.register_user'),
+          url(r'^register_success/$', 'cs243.view.register_success'),
+          
           
 ]

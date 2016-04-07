@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .forms import contactform,internshipsform
 from .models import contact,internships
 from django.http import HttpResponse
+#from cs243.view import 
 # Create your views here.
 
 
@@ -21,6 +22,7 @@ def contact(request):
     if f.is_valid():
         
         new=f.save(commit=False)
+        new.username=request.user.username
         #new.email=user.email
         #new.lastname='prodhan'
         # firstname=f.cleaned_data['firstname']
