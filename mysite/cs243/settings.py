@@ -56,7 +56,7 @@ ROOT_URLCONF = 'cs243.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/SHANTANU BHARADWAJ/Desktop/cs243/templates/'],
+        'DIRS': ['C:/Users/Sagar Roy Prodhan/Desktop/cs243/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +127,7 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'credentials/static/media')
+
+MEDIA_URL = '/credentials/static/media/'

@@ -4,8 +4,16 @@
 {%block content%}
 
 
-          <div class="form-style-5">
-<img src={% static "credentials/dist/img/sagarpro.jpg" %} class="img-circle" height="500" width="500" alt="userpic">
+<div class="form-style-5">
+<form action="/photo/" method="post" enctype="multipart/form-data" >{% csrf_token %}
+
+{{ form }}
+
+
+<input type="submit" value="SAVE" />
+
+</form>
+ 
 </div>
 
 {%endblock%}

@@ -6,7 +6,10 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.contrib import auth
 from django.core.context_processors import csrf
-from django.contrib.auth.forms import UserCreationForm
+from credentials.forms import MyRegistrationForm
+from django.core.mail import send_mail
+from credentials.models import contact,photo
+from django.views.decorators.cache import cache_control
 
 
 
@@ -36,18 +39,18 @@ def loggedin(request):
 
 def register_user(request):
     if request.method=="POST":
-        form = UserCreationForm(request.POST)
+        form = MyRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/register_success/')
         else:
-            print "yeahhhhhhhh"
+            print "register unsuccessful"
     else:
-        form = UserCreationForm()
+        form = MyRegistrationForm()
         
     args = {}
     args.update(csrf(request))
-    args['form']=UserCreationForm(request.POST)
+    args['form']=MyRegistrationForm(request.POST)
     print args
     return render_to_response('register.html',args,context_instance=RequestContext(request))
 
@@ -55,7 +58,9 @@ def register_success(request):
     return render_to_response('login.html',context_instance=RequestContext(request))
 
 def index2(request):
+    
     t=get_template("index2.html")
+    
     p=t.render(Context({'fullname':request.user.username}))
     return HttpResponse(p)
 
@@ -64,15 +69,11 @@ def studentprofile(request):
     p=t.render(Context({'fullname':request.user.username}))
     return HttpResponse(p)
 
-def photo(request):
-    t=get_template("photo.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-# def contact(request):
-#     t=get_template("contact.html")
-#     p=t.render(Context({}))
+# def photo(request):
+#     t=get_template("photo.html")
+#     p=t.render(Context({'fullname':request.user.username}))
 #     return HttpResponse(p)
+
 
 def postgrad(request):
     t=get_template("postgrad.html")
@@ -109,7 +110,20 @@ def projects(request):
     p=t.render(Context({'fullname':request.user.username}))
     return HttpResponse(p)
 
+def profile_contact(request):
+    t=get_template("profile_contact.html")
+    data = contact.objects.filter(username=request.user.username)
+    p=t.render(Context({'fullname':request.user.username,'email':request.user.email,'mobile':data[0].mobile,'temp':data[0].temporary_address,'perm':data[0].permanent_address,'website':data[0].website}))
+    return HttpResponse(p)
 
+def profile_photo(request):
+    t=get_template("profile_photo.html")
+    data = photo.objects.filter(username=request.user.username)
+    p=t.render(Context({'fullname':request.user.username,'picname':data[0].imagename}))
+    return HttpResponse(p)
 
-
+def ex(request):
+    t=get_template("blank.html")
+    p=t.render(Context({}))
+    return HttpResponse(p)
 

@@ -2,30 +2,17 @@
 {% load staticfiles %}
 
 {%block content%}
-<h2>language is :{{language}}</h2>
 
-<h2>Session Language is:{{session_language}}</h2>
-
-       <div class="form-style-5">
-<form action="" method="post">{% csrf_token %}
-<!--<fieldset>
-<legend><span class="number">3</span>Contact Details</legend>
-
-<textarea name="field1" placeholder="Temporary Address"></textarea>
-<br></br>
-<textarea name="field2" placeholder="Permanent Address"></textarea>
-<br></br>
-<input type="text" name="field3" placeholder="LinkedIn Id ">
-<br></br>
-<input type="text" name="field4" placeholder="Contact Number">
-<br></br>
-<input type="email" name="field5" placeholder="Email Address">     
-</fieldset>-->
+<div class="form-style-5">
+<form action="/contact/" method="post" enctype="multipart/form-data" <!--onsubmit="myFunction()"--> >{% csrf_token %}
 
 {{ form }}
-<input type="submit" value="SAVE" />
-</form>
 
+
+<input type="submit" value="SAVE" />
+
+</form>
+  
 </div>
          
 
