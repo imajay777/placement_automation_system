@@ -107,9 +107,9 @@
             </div>
           </div>
           <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
+          <form action="/studentsearch/" method="post" class="sidebar-form">{%csrf_token%}
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <input type="text" id="studentsearch" name="studentsearch" class="form-control" placeholder="student username...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -120,13 +120,13 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
-              <a href="overview.html">
+              <a href="/overview/">
                 <i class="fa fa-info"></i> <span>Overview</span> 
               </a>
              
             </li>
             <li class="treeview">
-              <a href="logo.html">
+              <a href="/logo/">
                 <i class="fa fa-camera"></i>
                 <span>Logo</span>
                 
@@ -134,7 +134,7 @@
             
             </li>
             <li class="treeview">
-              <a href="statistics.html">
+              <a href="/statistics/">
                 <i class="fa fa-file"></i>
                 <span>Statistics</span>
                 
@@ -142,26 +142,26 @@
             
             </li>
             <li class="treeview">
-              <a href="job.html">
+              <a href="/job/">
                <i class="fa fa-suitcase"></i>
                 <span></span>Job Profile</a>
             </li>
             
             <li class="treeview">
-              <a href="headoffice.html">
+              <a href="/headoffice/">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>Locations</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu" style="display:block; ">
-                <li><a href="headoffice.html"><i class="fa fa-building" aria-hidden="true"></i>Head Office</a></li>
-                <li><a href="works.html"><i class="fa fa-building" aria-hidden="true"></i>Works</a></li>
-                <li><a href="salesoffice.html"><i class="fa fa-building" aria-hidden="true"></i>Sales office</a></li>
+                <li><a href="/headoffice/"><i class="fa fa-building" aria-hidden="true"></i>Head Office</a></li>
+                <li><a href="/works/"><i class="fa fa-building" aria-hidden="true"></i>Works</a></li>
+                <li><a href="/salesoffice/"><i class="fa fa-building" aria-hidden="true"></i>Sales office</a></li>
                 
               </ul>
             </li>
             <li class="treeview">
-              <a href="benefits.html">
+              <a href="/benefits/">
                 <i class="fa fa-graduation-cap"></i>
                 <span>Benefits</span>
                 
@@ -169,8 +169,8 @@
               
             </li>
             <li class="treeview">
-              <a href="media.html">
-                <i class="fa fa-language"></i> <span>Media</span>
+              <a href="/clist/">
+                <i class="fa fa-language"></i> <span>Add an Announcement</span>
                 
               </a>
               

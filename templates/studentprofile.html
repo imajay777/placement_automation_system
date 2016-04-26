@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{% static 'credentials/plugins/daterangepicker/daterangepicker-bs3.css'%}">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{% static 'credentials/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'%}">
+    <!--dropdon.less-->
+    <link rel="stylesheet" href="{% static 'credentials/build/less/dropdown.less'%}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,22 +85,28 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="#" class="user-image" alt="User Image">
+{% with 'media/credentials/dist/img/'|add:picname as image_static %}
+<img src="{% static image_static %}"  class="img-circle"  height="20" width="20" alt="userpic"/>
+
+{% endwith %}
                   <span class="hidden-xs">{{fullname}}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="#" class="img-circle" alt="User Image">
+                    {% with 'media/credentials/dist/img/'|add:picname as image_static %}
+<img src="{% static image_static %}"  class="img-circle"  height="20" width="20" alt="userpic"/>
+
+{% endwith %}
                     <p>
                       {{fullname}}
-                      <small>web developer</small>
+                      <small>Web Developer</small>
                     </p>
                   </li>
                   
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="/studentprofile/" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="/login/" class="btn btn-default btn-flat">Sign out</a>
@@ -162,17 +170,17 @@
             </li>
             
             <li class="treeview">
-              <a href="/education/">
+              <a href="//">
                 <i class="fa fa-university"></i>
                 <span>Education</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="postgrad"><i class="fa fa-circle-o"></i>Post-Graduation</a></li>
-                <li><a href="undergrad"><i class="fa fa-circle-o"></i>Graduation</a></li>
-                <li><a href="srsec"><i class="fa fa-circle-o"></i>Sr. Secondary</a></li>
-                <li><a href="sec"><i class="fa fa-circle-o"></i>Secondary</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i>Certification</a></li>
+                <li><a href="/postgrad/"><i class="fa fa-circle-o"></i>Post-Graduation</a></li>
+                <li><a href="/undergrad/"><i class="fa fa-circle-o"></i>Graduation</a></li>
+                <li><a href="/srsec/"><i class="fa fa-circle-o"></i>Sr. Secondary</a></li>
+                <li><a href="/sec/"><i class="fa fa-circle-o"></i>Secondary</a></li>
+                
               </ul>
             </li>
             <li class="treeview">
@@ -197,19 +205,7 @@
                 
               </a>
             </li>
-            <li>
-              <a href="/researchpaper/">
-                <i class="fa fa-certificate"></i> <span>Research Paper</span>
-                
-              </a>
-            </li>
-            <li>
-              <a href="/extra/">
-                <i class="fa fa-arrow-right"></i> <span>Extra-Curricular</span>
-                
-              </a>
-            </li>
-            
+           
             
                 
               </ul>

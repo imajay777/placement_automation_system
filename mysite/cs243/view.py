@@ -8,10 +8,11 @@ from django.contrib import auth
 from django.core.context_processors import csrf
 from credentials.forms import MyRegistrationForm,overviewform
 from django.core.mail import send_mail
-from credentials.models import contact,photo
+from credentials.models import contact,photo,PLACEMENTS_DATA
 from django.views.decorators.cache import cache_control
 
-
+global piconce
+piconce=''
 
 def login(request):
     c={}
@@ -46,8 +47,14 @@ def invalid_login(request):
     return render_to_response('invalid_login.html',context_instance=RequestContext(request))
 
 def loggedin(request):
-    return render_to_response('index2.html',{'fullname':request.user.username},context_instance=RequestContext(request))
-
+    p=photo.objects.filter(username=request.user.username)
+    obj=PLACEMENTS_DATA.objects.filter()
+    if len(p)>0:
+        piconce=p[0].imagename
+        return render_to_response('index2.html',{'fullname':request.user.username,'picname':p[0].imagename,'total':obj[0].totalpercentageplaced,'ugplaced':obj[0].undergradplaced,'pgplaced':obj[0].postgradplaced},context_instance=RequestContext(request))
+    else:
+        return render_to_response('index2.html',{'fullname':request.user.username,'picname':''},context_instance=RequestContext(request))
+        
 def c_loggedin(request):
     f2=overviewform(request.POST)
      
@@ -82,58 +89,15 @@ def register_success(request):
     return render_to_response('login.html',context_instance=RequestContext(request))
 
 def index2(request):
-    
+    obj=PLACEMENTS_DATA.objects.filter()
     t=get_template("index2.html")
     
-    p=t.render(Context({'fullname':request.user.username}))
+    p=t.render(Context({'fullname':request.user.username,'total':obj[0].totalpercentageplaced,'ugplaced':obj[0].undergradplaced,'pgplaced':obj[0].postgradplaced}))
     return HttpResponse(p)
 
 def studentprofile(request):
-    t=get_template("studentprofile.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-# def photo(request):
-#     t=get_template("photo.html")
-#     p=t.render(Context({'fullname':request.user.username}))
-#     return HttpResponse(p)
-
-
-def postgrad(request):
-    t=get_template("postgrad.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-def srsec(request):
-    t=get_template("srsec.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-def sec(request):
-    t=get_template("sec.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-def undergrad(request):
-    t=get_template("undergrad.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-# def internships(request):
-#     t=get_template("internships.html")
-#     p=t.render(Context({}))
-#     return HttpResponse(p)
-
-def languages(request):
-    t=get_template("languages.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
-def projects(request):
-    t=get_template("projects.html")
-    p=t.render(Context({'fullname':request.user.username}))
-    return HttpResponse(p)
-
+    return render_to_response('studentprofile.html',{'fullname':request.user.username,'picname':piconce},context_instance=RequestContext(request))
+    
 def profile_contact(request):
     t=get_template("profile_contact.html")
     data = contact.objects.filter(username=request.user.username)

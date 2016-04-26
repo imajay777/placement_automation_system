@@ -1,0 +1,125 @@
+{% extends "base.html"%}
+{%load staticfiles%}
+
+{%block content%}
+
+    <style>
+        .photo {
+
+            background: #1d3454;
+            margin-top: 10px;
+            margin-right :50px;
+            float:right;
+        }
+        .photo img{
+
+            padding:5px;
+
+        }
+        .title h1{
+            text-align: center;
+            color: #75050c;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .details h2{
+            color: #001f3f;
+            font-weight: bold;
+        }
+        .details {
+            margin-left: 40px;
+        }
+        .details p{
+            font-size:16px;
+        }
+        .details h3{
+            color: #001f3f;
+        }
+    </style>
+
+        <div class ="title">
+            <h1>{{name}}</h1>
+        </div>
+
+         {% with 'media/credentials/dist/img/'|add:picname as image_static %}
+        <div class = "photo" >
+            <div class="border">
+            <img src="{% static image_static %}"   height="400" width="300" alt="userpic"/>
+            </div>
+        </div>
+        {% endwith %}
+
+        <div class ="details" >
+            <h2>CONTACT DETAILS</h2>
+            <p>
+                FULL NAME : {{ name }} <br>
+                EMAIL : {{email}}<br>
+                MOBILE : {{mob}}<br>
+                PERMANENT ADDRESS : {{per}}<br>
+                TEMPORARY ADDRESS : {{temp}}<br>
+            </p>
+
+             <h2>INTERNSHIP</h2>
+            <p>
+            FIELD 1: {{f1 }}<br>
+            FIELD 2: {{f2 }}<br>
+            FIELD 3: {{f3 }}<br>
+
+            </p>
+
+            <h2>EDUCATIONS</h2>
+            <h3>Under Graduate</h3>
+            <P>
+                Year of Passing : {{ yopu}}<br>
+                Last SPI : {{ spiu }} <br>
+                CPI : {{ cpiu }}<br>
+                Branch of Study : {{ branch }} <br>
+
+            </P>
+
+            <h3>Post Graduate</h3>
+            <P>
+                Year of Passing : {{ yopp}}<br>
+                Last SPI : {{ spip }} <br>
+                CPI : {{ cpip }}<br>
+                <!--Branch of Study : {{ branch }} <br>-->
+
+            </P>
+
+            <h3>Senior Secondary</h3>
+            <P>
+                Year of Passing : {{ yopsr}}<br>
+                Percentage Obtained : {{ perc }} <br>
+                School : {{ school }}<br>
+                Board of School : {{ board }} <br>
+
+            </P>
+
+            <h3>Secondary</h3>
+            <P>
+                Year of Passing : {{ yopsc}}<br>
+                Percentage Obtained : {{ percsc }} <br>
+                School : {{ schoolsc }}<br>
+                Board of School : {{ boardsc }} <br>
+
+            </P>
+
+            <h2>SKILLS</h2>
+            <h3>Programming Languages </h3>
+            <P>
+                Languages : {{ l}}<br>
+
+            </P>
+
+            <h2>PROJECTS</h2>
+            <h3>Project 1</h3>
+            <p>Decription : {{ pr1 }}</p>
+
+            <h3>Project 1</h3>
+            <p>Decription : {{ pr2 }}</p>
+
+            <h3>Project 1</h3>
+            <p>Decription : {{ pr3 }}</p>
+
+         </div>
+{% endblock %}
