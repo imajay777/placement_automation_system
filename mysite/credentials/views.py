@@ -11,7 +11,7 @@ from django.shortcuts import render_to_response
 import cgi
 from cs243.view import piconce
 # Create your views here.
-global field1,field2,field3,yopp,spip,cpip,branch,yopu,spiu,cpiu,board,school,perc,boardsc,schoolsc,percsc,yopsc,yopsr,l,pr1,pr2,pr3,f1,f2,f3
+global field1,field2,field3,yopp,spip,email,mob,per,temp,cpip,branch,yopu,spiu,cpiu,board,school,perc,boardsc,schoolsc,percsc,yopsc,yopsr,l,pr1,pr2,pr3,f1,f2,f3
 
 
 def search(request):
@@ -22,79 +22,94 @@ def search(request):
 def studentsearch(request):
     data = contact.objects.filter(username=request.POST['studentsearch'])
     if len(data)>0:
-        p=photo.objects.filter(username=request.POST['studentsearch'])
-        i=internships.objects.filter(username=request.POST['studentsearch'])
-        if len(i)>0:
-            f1=i[0].field1
-            f2=i[0].field2
-            f3=i[0].field3
-        else:
-            f1=''
-            f2=''
-            f3=''
-        # post=postgrad.objects.filter(username=request.POST['studentsearch'])
-        # if len(post)>0:
-        #     yopp=post[0].year_of_passing
-        #     spip=post[0].Last_spi
-        #     cpip=post[0].Cpi
-        #     branch=post[0].Branch_of_study
-        # else:
-        #     yopp=''
-        #     spip=''
-        #     cpip=''
-        #     branch=''
-        # under=undergrad.objects.filter(username=request.POST['studentsearch'])
-        # if len(under)>0:
-        #     yopu=under[0].year_of_passing
-        #     spiu=under[0].Last_spi
-        #     cpiu=under[0].Cpi
-        #     
-        # else:
-        #     yopu=''
-        #     spiu=''
-        #     cpiu=''
-        # sr=srsec.objects.filter(username=request.POST['studentsearch'])
-        # if len(sr)>0:
-        #     yopsr=sr[0].year_of_passing
-        #     perc=sr[0].percentage_obtained
-        #     school=sr[0].school
-        #     board=sr[0].board
-        # else:
-        #     yopsr=''
-        #     perc=''
-        #     school=''
-        #     board=''   
-        # sc=sec.objects.filter(username=request.POST['studentsearch'])
-        # if len(sc)>0:
-        #     yopsc=sc[0].year_of_passing
-        #     percsc=sc[0].percentage_obtained
-        #     schoolsc=sc[0].school
-        #     boardsc=sc[0].board
-        # else:
-        #     yopsc=''
-        #     percsc=''
-        #     schoolsc=''
-        #     boardsc=''
-        # lang=language.objects.filter(username=request.POST['studentsearch'])
-        # if len(lang)>0:
-        #     l=lang[0].languages_known
-        # else:
-        #     l=''
-        # pr=projects.objects.filter(username=request.POST['studentsearch'])
-        # if len(sc)>0:
-        #     pr1=pr[0].project1
-        #     pr2=pr[0].project2
-        #     pr3=pr[0].project3
-        # else:
-        #     pr1=''
-        #     pr2=''
-        #     pr3=''
+        email=data[0].email
+        mob=data[0].mobile
+        temp=data[0].temporary_address
+        per=data[0].permanent_address
+    else:
+        email=''
+        mob=''
+        temp=''
+        per=''
+        
+    p=photo.objects.filter(username=request.POST['studentsearch'])
+    if len(p)>0:
+        pic=p[0].imagename
+    else:
+        pic=''
+        
+    i=internship.objects.filter(username=request.POST['studentsearch'])
+    if len(i)>0:
+        f1=i[0].field1
+        f2=i[0].field2
+        f3=i[0].field3
+    else:
+        f1=''
+        f2=''
+        f3=''
+    post=postgrad.objects.filter(username=request.POST['studentsearch'])
+    if len(post)>0:
+        yopp=post[0].year_of_passing
+        spip=post[0].Last_spi
+        cpip=post[0].Cpi
+        branch=post[0].Branch_of_study
+    else:
+        yopp=''
+        spip=''
+        cpip=''
+        branch=''
+    under=undergrad.objects.filter(username=request.POST['studentsearch'])
+    if len(under)>0:
+        yopu=under[0].year_of_passing
+        spiu=under[0].Last_spi
+        cpiu=under[0].Cpi
+             
+    else:
+        yopu=''
+        spiu=''
+        cpiu=''
+    sr=srsec.objects.filter(username=request.POST['studentsearch'])
+    if len(sr)>0:
+        yopsr=sr[0].year_of_passing
+        perc=sr[0].percentage_obtained
+        school=sr[0].school
+        board=sr[0].Board
+    else:
+        yopsr=''
+        perc=''
+        school=''
+        board=''   
+    sc=sec.objects.filter(username=request.POST['studentsearch'])
+    if len(sc)>0:
+        yopsc=sc[0].year_of_passing
+        percsc=sc[0].percentage_or_cpi
+        schoolsc=sc[0].school
+        boardsc=sc[0].Board
+    else:
+        yopsc=''
+        percsc=''
+        schoolsc=''
+        boardsc=''
+    # lang=language.objects.filter(username=request.POST['studentsearch'])
+    # if len(lang)>0:
+    #     l=lang[0].languages_known
+    # else:
+    l=''
+    pr=project.objects.filter(username=request.POST['studentsearch'])
+    if len(pr)>0:
+        pr1=pr[0].project1
+        pr2=pr[0].project2
+        pr3=pr[0].project3
+    else:
+        pr1=''
+        pr2=''
+        pr3=''
             
             
         #context={'name':request.POST['studentsearch'],'l':l,'picname':p[0].imagename,'pr1':pr1,'pr2':pr2,'pr3':pr3,'yopsr':yopsr,'yopsc':yopsc,'percsc':percsc,'perc':perc,'schoolsc':schoolsc,'boardsc':boardsc,'school':school,'board':board,'yopu':yopu,'cpiu':cpiu,'spiu':spiu,'yopp':yopp,'cpip':cpip,'spip':spip,'branch':branch,'f1':field1,'f2':field2,'f3':field3,'email':data[0].email,'mob':data[0].mobile,'temp':data[0].temporary_address,'per':data[0].permanent_address}
-        context={'name':request.POST['studentsearch'],'picname':p[0].imagename,'f1':f1,'f2':f2,'f3':f3,'email':data[0].email,'mob':data[0].mobile,'temp':data[0].temporary_address,'per':data[0].permanent_address}
-        template="studentsearch.html"
-        return render(request,template,context)
+    context={'name':request.POST['studentsearch'],'pr1':pr1,'pr2':pr2,'pr3':pr3,'l':l,'yopsr':yopsr,'yopsc':yopsc,'percsc':percsc,'perc':perc,'schoolsc':schoolsc,'boardsc':boardsc,'school':school,'board':board,'yopu':yopu,'cpiu':cpiu,'spiu':spiu,'yopp':yopp,'cpip':cpip,'spip':spip,'branch':branch,'picname':pic,'f1':f1,'f2':f2,'f3':f3,'email':email,'mob':mob,'temp':temp,'per':per}
+    template="studentsearch.html"
+    return render(request,template,context)
 
 def contactview(request):
     language='en-gb'
@@ -163,9 +178,6 @@ def postgradview(request):
     f2=postgradform(request.POST)
     
     if f2.is_valid():
-             
-         
-        
         new=f2.save(commit=False)
         new.username = request.user.username
         

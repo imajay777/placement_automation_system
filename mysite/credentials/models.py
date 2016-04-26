@@ -54,14 +54,14 @@ class srsec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_obtained=models.FloatField(max_length=10)
-    school=models.CharField(max_length=10)
+    school=models.CharField(max_length=40)
     Board=models.CharField(max_length=20)
     
 class sec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_or_cpi=models.FloatField(max_length=10)
-    school=models.CharField(max_length=10)
+    school=models.CharField(max_length=40)
     Board=models.CharField(max_length=20)
     
 class language(models.Model):
