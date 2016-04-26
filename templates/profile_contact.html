@@ -8,8 +8,7 @@
 <p>Temporary Address:{{temp}}</p><br>
 <p>Permanent Address:{{perm}}</p><br>
 <p>Website:{{website}}</p><br>
-{% if obj %}
-    <p>CV:<a href="{{ obj.upload_cv.url }}">{{ obj.upload_cv.name }}</a></p>
+{% if contact.upload_cv %}
 
 {%endif%}      
 {%endblock%}

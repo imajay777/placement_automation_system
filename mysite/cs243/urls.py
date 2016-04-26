@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url,patterns,include
 from django.contrib import admin
 from cs243.view import login,index2,studentprofile,ex
-from credentials.views import internshipview,contactview,languageview,projectview,postgradview,undergradview,srsecview,secview,language,overview,photoview,search,studentsearch,statistics,jobprofile,logo,media,headoffice,work,salesoffice,benefits#,companysearch
+from credentials.views import internshipview,contactview,languageview,projectview,postgradview,undergradview,srsecview,secview,language,overview,photoview,search,studentsearch,statistics,jobprofile,logo,media,headoffice,work,salesoffice,benefits,companysearch
 from django.conf import settings
 from django.conf.urls.static import static
 
 
-   
+
+
 urlpatterns = patterns('',
      (r'^', include('credentials.urls')),(r'^admin/', admin.site.urls),
      (r'^login/$', login),
@@ -48,7 +49,7 @@ urlpatterns = patterns('',
           (r'^profile_contact/$', 'cs243.view.profile_contact'),
           (r'^search/$', search),
           (r'^studentsearch/$', studentsearch),
-          #(r'^companysearch/$', companysearch),
+          (r'^companysearch/$', companysearch),
           (r'^overview/$',overview ),
           (r'^logo/$', logo),
           (r'^statistics/$', statistics),
@@ -58,5 +59,7 @@ urlpatterns = patterns('',
           (r'^media/$', media),
           (r'^works/$', work),
           (r'^benefits/$', benefits),
-          (r'file:///C:/Users/Sagar Roy Prodhan/Desktop/cs243/mysite/credentials/media/uploaded_files/1460525607_91_CV_Sagar_Roy_Prodhan.pdf$', ex),
+
+
+                       (r'file:///C:/Users/Hp/Desktop/cs243/mysite/credentials/media/uploaded_files/1460525607_91_CV_Sagar_Roy_Prodhan.pdf$', ex),
  ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

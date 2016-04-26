@@ -189,7 +189,7 @@
         <!-- /.sidebar -->
       </aside>
       <div class="content-wrapper">
-<form action="logo" method="post">
+<form action="/logo/" method="post">{% csrf_token %}
 {{form2}}
 <input type="submit" value="UPLOAD LOGO" >
 </form>

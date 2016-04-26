@@ -11,10 +11,13 @@ class MyRegistrationForm(UserCreationForm):
     #first_name=forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'first name','cols': 0, 'rows': 1}))
     #last_name=forms.CharField(required=True)
     #student_company=forms.CharField(required=True)
+    #user_type=forms.CharField(required=True)
+    # date_of_birth = models.DateField(blank = True, null = True)
+
     class Meta:
         model=User
-        widgets={'email':Textarea(attrs={'placeholder':'Email','cols': 80, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 80, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 80, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 80, 'rows': 1})}
-        fields=['username','first_name','last_name','email','password1','password2']
+        widgets={'date_of_birth':Textarea(attrs={'placeholder':'dd/mm/yyyy','cols':40, 'rows':1}),'email':Textarea(attrs={'placeholder':'Email','cols': 70, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 70, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 70, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 70, 'rows': 1})}
+        fields=['username','first_name','last_name','email','password1','password2','user_type','date_of_birth']
         
     def save(self,commit=True):
         user=super(MyRegistrationForm,self).save(commit=False)
@@ -30,10 +33,6 @@ class MyRegistrationForm(UserCreationForm):
     
     
 class contactform(forms.ModelForm):
-    upload_cv = forms.FileField(
-        label='Select a file',
-        help_text='max. 50 Megabytes'
-    )
     class Meta:
         error_messages = {
             NON_FIELD_ERRORS: {
@@ -143,13 +142,11 @@ class projectform(forms.ModelForm):
 class DocumentForm(forms.Form):
     docfile = forms.FileField(
         label='Select a file',
-        help_text='max. 42 Megabytes'
+        help_text='max. 42 megabytes'
     )
     
-####################   
-###company forms###
-##################
-
+    
+###company forms
 
 class overviewform(forms.ModelForm):
     class Meta:

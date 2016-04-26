@@ -1,4 +1,4 @@
-{% extends "cbase.html"%}
+{% extends "base.html"%}
 {%load staticfiles%}
 
 {%block content%}
@@ -49,77 +49,40 @@
         </div>
         {% endwith %}
 
+        <div class ="title">
+            <h1>{{name}}</h1>
+        </div>
+
         <div class ="details" >
+            <h2>JOB DETAILS</h2>
+
+
+            <P>
+                Description : <br>
+
+            </P>
             <h2>CONTACT DETAILS</h2>
             <p>
-                FULL NAME : {{ name }} <br>
+                COMPANY NAME : {{ name }} <br>
                 EMAIL : {{email}}<br>
                 MOBILE : {{mob}}<br>
                 PERMANENT ADDRESS : {{per}}<br>
                 TEMPORARY ADDRESS : {{temp}}<br>
             </p>
 
-             <h2>INTERNSHIP</h2>
-            <p>
-            FIELD 1: {{f1 }}<br>
-            FIELD 2: {{f2 }}<br>
-            FIELD 3: {{f3 }}<br>
 
-            </p>
 
-            <h2>EDUCATIONS</h2>
-            <h3>Under Graduate</h3>
+            <h2>SKILLS REQUIRED</h2>
+
+
             <P>
-                Year of Passing : {{ yopu}}<br>
-                Last SPI : {{ spiu }} <br>
-                CPI : {{ cpiu }}<br>
-                Branch of Study : {{ branch }} <br>
-
-            </P>
-
-            <h3>Post Graduate</h3>
-            <P>
-                Year of Passing : {{ yopp}}<br>
-                Last SPI : {{ spip }} <br>
-                CPI : {{ cpip }}<br>
-                <!--Branch of Study : {{ branch }} <br>-->
-
-            </P>
-
-            <h3>Senior Secondary</h3>
-            <P>
-                Year of Passing : {{ yopsr}}<br>
-                Percentage Obtained : {{ perc }} <br>
-                School : {{ school }}<br>
-                Board of School : {{ board }} <br>
-
-            </P>
-
-            <h3>Secondary</h3>
-            <P>
-                Year of Passing : {{ yopsc}}<br>
-                Percentage Obtained : {{ percsc }} <br>
-                School : {{ schoolsc }}<br>
-                Board of School : {{ boardsc }} <br>
-
-            </P>
-
-            <h2>SKILLS</h2>
-            <h3>Programming Languages </h3>
-            <P>
+                CPI Cut-off (if any ) :  <br>
                 Languages : {{ l}}<br>
 
             </P>
 
-            <h2>PROJECTS</h2>
-            <h3>Project 1</h3>
-            <p>Decription : {{ pr1 }}</p>
+            <h2>BENEFITS</h2>
+            <p>Decription : {{ BEN }}</p>
 
-            <h3>Project 1</h3>
-            <p>Decription : {{ pr2 }}</p>
 
-            <h3>Project 1</h3>
-            <p>Decription : {{ pr3 }}</p>
-
-         </div>
 {% endblock %}

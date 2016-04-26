@@ -10,6 +10,16 @@ def get_upload_filename(instance,filename):
 
 def get_upload_imagename(instance,filename):
     return "credentials/dist/img/%s" % (filename)
+
+"""
+# Extend User  model
+from django.contrib.auth.models import User
+
+class Extra_Info(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user_type = models.CharField(max_length=20)
+    dob = models.DateField(blank = True, null = True)
+"""
 # Create your models here.
 
 class PLACEMENTS_DATA(models.Model):
@@ -27,7 +37,7 @@ class contact(models.Model):
     temporary_address=models.CharField(max_length=50)
     permanent_address=models.CharField(max_length=50,null=True)
     website=models.CharField(max_length=20)
-    upload_cv=models.FileField(upload_to='cvfiles')
+    upload_cv=models.FileField(upload_to=get_upload_filename,null=True)
    
 class internship(models.Model):
     username=models.CharField(max_length=20,null=True)
@@ -54,14 +64,14 @@ class srsec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_obtained=models.FloatField(max_length=10)
-    school=models.CharField(max_length=40)
+    school=models.CharField(max_length=10)
     Board=models.CharField(max_length=20)
     
 class sec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_or_cpi=models.FloatField(max_length=10)
-    school=models.CharField(max_length=40)
+    school=models.CharField(max_length=10)
     Board=models.CharField(max_length=20)
     
 class language(models.Model):
@@ -82,9 +92,8 @@ class photo(models.Model):
 class Document(models.Model):
     docfile = models.FileField(upload_to='documents/%Y/%m/%d')
     
-####################    
-##company models###
-###################
+    
+##company models
 
 class overview(models.Model):
     username=models.CharField(max_length=20)
