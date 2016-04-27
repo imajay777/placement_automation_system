@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm,Textarea
 from django.core.exceptions import NON_FIELD_ERRORS
-from .models import contact,internship,language,project,postgrad,undergrad,srsec,sec,photo,overview,jobprofile,benefits,logo,media,headoffice,Work,Sales_office,statistics
+from .models import contact,internship,planguage,project,postgrad,undergrad,srsec,sec,photo,overviewm,jobprofilem,benefitsm,logom,media,headofficem,Workm,Sales_officem,statisticsm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -11,17 +11,10 @@ class MyRegistrationForm(UserCreationForm):
     #first_name=forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'first name','cols': 0, 'rows': 1}))
     #last_name=forms.CharField(required=True)
     #student_company=forms.CharField(required=True)
-    #user_type=forms.CharField(required=True)
-    # date_of_birth = models.DateField(blank = True, null = True)
-
     class Meta:
         model=User
-<<<<<<< HEAD
-        widgets={'user_type':Textarea(attrs={'placeholder':'Student_or_Company','cols':40, 'rows':1}),'date_of_birth':Textarea(attrs={'placeholder':'mm/dd/yyyy','cols':40, 'rows':1}),'password1':Textarea(attrs={'placeholder':'password','cols': 70, 'rows': 1}),'password2':Textarea(attrs={'placeholder':'confirm password','cols': 70, 'rows': 1}),'email':Textarea(attrs={'placeholder':'Email','cols': 70, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 70, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 70, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 70, 'rows': 1})}
-=======
-        widgets={'date_of_birth':Textarea(attrs={'placeholder':'dd/mm/yyyy','cols':40, 'rows':1}),'email':Textarea(attrs={'placeholder':'Email','cols': 70, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 70, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 70, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 70, 'rows': 1})}
->>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
-        fields=['username','first_name','last_name','email','password1','password2','user_type','date_of_birth']
+        widgets={'user_type':Textarea(attrs={'placeholder':'Student or Company','cols': 80, 'rows': 1}),'email':Textarea(attrs={'placeholder':'Email','cols': 80, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 80, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 80, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 80, 'rows': 1})}
+        fields=['username','first_name','last_name','email','password1','password2','user_type']
         
     def save(self,commit=True):
         user=super(MyRegistrationForm,self).save(commit=False)
@@ -37,6 +30,10 @@ class MyRegistrationForm(UserCreationForm):
     
     
 class contactform(forms.ModelForm):
+    upload_cv = forms.FileField(
+        label='Select a file',
+        help_text='max. 50 Megabytes'
+    )
     class Meta:
         error_messages = {
             NON_FIELD_ERRORS: {
@@ -128,7 +125,7 @@ class languageform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=language
+        model=planguage
         
         fields=['languages_known']
         
@@ -146,11 +143,13 @@ class projectform(forms.ModelForm):
 class DocumentForm(forms.Form):
     docfile = forms.FileField(
         label='Select a file',
-        help_text='max. 42 megabytes'
+        help_text='max. 42 Megabytes'
     )
     
-    
-###company forms
+####################   
+###company forms###
+##################
+
 
 class overviewform(forms.ModelForm):
     class Meta:
@@ -159,7 +158,7 @@ class overviewform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=overview
+        model=overviewm
         
         fields=['description','url']
         
@@ -171,7 +170,7 @@ class jobprofileform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=jobprofile
+        model=jobprofilem
         
         fields=['position','CPI_cut_off','Branches','description']
         
@@ -183,7 +182,7 @@ class benefitsform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=benefits
+        model=benefitsm
         
         fields=['description']
         
@@ -194,7 +193,7 @@ class statisticsform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=benefits
+        model=benefitsm
         
         fields=['description']
 
@@ -205,9 +204,13 @@ class logoform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=logo
+        model=logom
         
         fields=['upload']
+        
+    # def clean_ulpoad(self):
+    #     upload=self.cleaned_data.get('upload')
+    #     return upload
 		
 class mediaform(forms.ModelForm):
     class Meta:
@@ -227,7 +230,7 @@ class headofficeform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=headoffice
+        model=headofficem
         
         fields=['plot_number','Area','City','Pincode','Country','Phone','email']
 		
@@ -238,7 +241,7 @@ class Workform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=Work
+        model=Workm
         
         fields=['plot_number','Area','City','Pincode','Country','Phone','email']
 
@@ -249,7 +252,7 @@ class Sales_officeform(forms.ModelForm):
                 'unique_together': "%(model_name)s's %(field_labels)s are not unique.",
             }
         }
-        model=Sales_office
+        model=Sales_officem
         
         fields=['plot_number','Area','City','Pincode','Country','Phone','email']
 		

@@ -11,15 +11,8 @@ def get_upload_filename(instance,filename):
 def get_upload_imagename(instance,filename):
     return "credentials/dist/img/%s" % (filename)
 
-"""
-# Extend User  model
-from django.contrib.auth.models import User
-
-class Extra_Info(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    user_type = models.CharField(max_length=20)
-    dob = models.DateField(blank = True, null = True)
-"""
+def get_upload_logoname(instance,filename):
+    return "credentials/dist/logo/%s" % (filename)
 # Create your models here.
 
 class PLACEMENTS_DATA(models.Model):
@@ -37,7 +30,7 @@ class contact(models.Model):
     temporary_address=models.CharField(max_length=50)
     permanent_address=models.CharField(max_length=50,null=True)
     website=models.CharField(max_length=20)
-    upload_cv=models.FileField(upload_to=get_upload_filename,null=True)
+    upload_cv=models.FileField(upload_to='cvfiles',null=True)
    
 class internship(models.Model):
     username=models.CharField(max_length=20,null=True)
@@ -64,19 +57,19 @@ class srsec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_obtained=models.FloatField(max_length=10)
-    school=models.CharField(max_length=10)
+    school=models.CharField(max_length=40)
     Board=models.CharField(max_length=20)
     
 class sec(models.Model):
     username=models.CharField(max_length=20)
     year_of_passing=models.IntegerField()
     percentage_or_cpi=models.FloatField(max_length=10)
-    school=models.CharField(max_length=10)
+    school=models.CharField(max_length=40)
     Board=models.CharField(max_length=20)
     
-class language(models.Model):
+class planguage(models.Model):
     username=models.CharField(max_length=20)
-    languages_known=models.CharField(max_length=40)   
+    languages_known=models.CharField(max_length=50)   
     
 class project(models.Model):
     username=models.CharField(max_length=20)
@@ -86,46 +79,48 @@ class project(models.Model):
     
 class photo(models.Model):
     username=models.CharField(max_length=20)
-    imagename=models.CharField(max_length=50,null=True)
+    imagename=models.CharField(max_length=100,null=True)
     upload=models.ImageField(upload_to=get_upload_imagename,null=True)
 
 class Document(models.Model):
     docfile = models.FileField(upload_to='documents/%Y/%m/%d')
     
-    
-##company models
+####################    
+##company models###
+###################
 
-class overview(models.Model):
+class overviewm(models.Model):
     username=models.CharField(max_length=20)
     description=models.CharField(max_length=500,null=True)
     url=models.CharField(max_length=20,null=True)
     
     
-class jobprofile(models.Model):
+class jobprofilem(models.Model):
     username=models.CharField(max_length=20)
     position=models.CharField(max_length=20,null=True)
     CPI_cut_off=models.FloatField(max_length=10)
     Branches=models.CharField(max_length=500,null=True)
     description=models.CharField(max_length=500,null=True)
     
-class benefits(models.Model):
+class benefitsm(models.Model):
     username=models.CharField(max_length=20)
     description=models.CharField(max_length=500,null=True)
     
-class statistics(models.Model):
+class statisticsm(models.Model):
     username=models.CharField(max_length=20)
     description=models.CharField(max_length=500,null=True)
     
-class logo(models.Model):
+class logom(models.Model):
     username=models.CharField(max_length=20)
-    upload=models.ImageField(upload_to=get_upload_imagename,null=True)
+    imagename=models.CharField(max_length=100,null=True)
+    upload=models.ImageField(upload_to=get_upload_logoname,null=True)
     
 
 class media(models.Model):
     username=models.CharField(max_length=20)
     upload=models.ImageField(upload_to=get_upload_imagename,null=True)
     
-class headoffice(models.Model):
+class headofficem(models.Model):
     username=models.CharField(max_length=20)
     plot_number=models.CharField(max_length=30,null=True)
     Area=models.CharField(max_length=100,null=True)
@@ -135,7 +130,7 @@ class headoffice(models.Model):
     Phone=models.IntegerField(null=True)
     email=models.EmailField(max_length=30)
     
-class Work(models.Model):
+class Workm(models.Model):
     username=models.CharField(max_length=20)
     plot_number=models.CharField(max_length=30,null=True)
     Area=models.CharField(max_length=100,null=True)
@@ -145,7 +140,7 @@ class Work(models.Model):
     Phone=models.IntegerField(null=True)
     email=models.EmailField(max_length=30)
     
-class Sales_office(models.Model):
+class Sales_officem(models.Model):
     username=models.CharField(max_length=20)
     plot_number=models.CharField(max_length=30,null=True)
     Area=models.CharField(max_length=100,null=True)

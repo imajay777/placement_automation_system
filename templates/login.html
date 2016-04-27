@@ -5,7 +5,7 @@
 			<meta charset="UTF-8">
 			<title>placement login</title>
 			
-			<link rel="stylesheet" href={% static "credentials/dist/css/decorate.css" %}>
+			<link rel="stylesheet" href={% static "credentials/decorate.css" %}>
 			
 			<!--jQuery library used here-->
 			<script src="jquery/jquery.js"></script>
@@ -18,19 +18,18 @@
     
 <!--Title-->
 			<div class="title">
-				<h1>Placement Automation Portal</h1>
+				<h1>Placement Portal Login</h1>
 			</div>
 
 			<div class="box">
  
 				<div class="card">
-
-                    <div class="tab-object">
-					    <ul>
-						    <li class="active"><a href="#student">Student</a></li>
-						    <li><a href="#company">Company</a></li>
-					    </ul>
-                    </div>
+					<div class="tab-object">
+					<ul >
+						<li class="active"><a href="#student">Student</a></li>
+						<li><a href="#company">Company</a></li>
+					</ul>
+					</div>
 				
 					<div class="in-tab">
 						<div id="student" class="tab active">
@@ -48,13 +47,14 @@
 								<div class="input-box">
 									<input type="password" name="password" id="password" required="required"/>
 									<label for="password">Password</label>
+
 									<div class="bar"></div>
 								</div>
+                                  <input type="hidden" name="user_type" id="user_type" value="student">{%csrf_token%}
 								<div class="button-box">
-								<button><span >Login</span></button>
+								<button><span >Go</span></button>
 								</div>
 								<div class="base">
-									<a href="#" class="forgot">Forgot pass?</a>
 									<a href="/register/" class="signup">Sign Up</a>
 						
 								</div>
@@ -75,11 +75,12 @@
 									<label for="comPass">Password</label>
 									<div class="bar"></div>
 								</div>
+                                <input type="hidden" name="user_type" id="user_type" value="company">{%csrf_token%}
 								<div class="button-box">
-									<button><span>Login</span></button>
+									<button><span>Go</span></button>
 								</div>
 								<div class="base">
-									<a href="#" class="forgot">Forgot pass?</a>
+
 									<a href="/register/" class="signup">Sign Up</a>
 						
 								</div>

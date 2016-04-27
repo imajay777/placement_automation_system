@@ -107,9 +107,9 @@
             </div>
           </div>
           <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
+          <form action="/studentsearch/" method="post" class="sidebar-form">{%csrf_token%}
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <input type="text" name="studentsearch" id="studentsearch" class="form-control" placeholder="Search...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
@@ -168,13 +168,7 @@
               </a>
 
             </li>
-            <li class="treeview">
-              <a href="/media/">
-                <i class="fa fa-language"></i> <span>Media</span>
 
-              </a>
-
-            </li>
 
 
 
@@ -189,7 +183,12 @@
         <!-- /.sidebar -->
       </aside>
       <div class="content-wrapper">
-       {{form2}}
+        
+    <form method="post" action="/statistics/">{%csrf_token%}
+{{form2}}
+
+<input type="submit" value="SAVE" />
+</form>
       </div><!-- /.content-wrapper -->
 
 <!--- footer starts here -->

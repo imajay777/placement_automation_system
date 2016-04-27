@@ -8,10 +8,12 @@ from django.contrib import auth
 from django.core.context_processors import csrf
 from credentials.forms import MyRegistrationForm,overviewform
 from django.core.mail import send_mail
-from credentials.models import contact,photo,PLACEMENTS_DATA
+from credentials.models import *
 from django.views.decorators.cache import cache_control
+from django.contrib.auth.models import User
 
-global piconce
+
+global piconce,flag
 piconce=''
 
 def login(request):
@@ -24,10 +26,13 @@ def login(request):
 def auth_view(request):
     username=request.POST.get('username', '')
     password=request.POST.get('password', '')
+    user_type=request.POST.get('user_type','')
     user=auth.authenticate(username=username,password=password)
+    obj=User.objects.filter(username=user)
     
-    if user is not None:
+    if user is not None and user_type==obj[0].user_type:
         auth.login(request,user)
+        flag=0
         return HttpResponseRedirect('/loggedin/')
     else:
         return HttpResponseRedirect('/invalid/')
@@ -35,9 +40,11 @@ def auth_view(request):
 def c_auth_view(request):
     username=request.POST.get('username', '')
     password=request.POST.get('password', '')
+    user_type=request.POST.get('user_type','')
     user=auth.authenticate(username=username,password=password)
-    
-    if user is not None:
+    obj = User.objects.filter(username=user)
+
+    if user is not None and user_type == obj[0].user_type:
         auth.login(request,user)
         return HttpResponseRedirect('/cloggedin/')
     else:
@@ -50,10 +57,11 @@ def loggedin(request):
     p=photo.objects.filter(username=request.user.username)
     obj=PLACEMENTS_DATA.objects.filter()
     if len(p)>0:
-        piconce=p[0].imagename
+        piconce = p[0].imagename
         return render_to_response('index2.html',{'fullname':request.user.username,'picname':p[0].imagename,'total':obj[0].totalpercentageplaced,'ugplaced':obj[0].undergradplaced,'pgplaced':obj[0].postgradplaced},context_instance=RequestContext(request))
     else:
-        return render_to_response('index2.html',{'fullname':request.user.username,'picname':''},context_instance=RequestContext(request))
+        piconce=''
+        return render_to_response('index2.html',{'fullname':request.user.username,'picname':'','total':obj[0].totalpercentageplaced,'ugplaced':obj[0].undergradplaced,'pgplaced':obj[0].postgradplaced},context_instance=RequestContext(request))
         
 def c_loggedin(request):
     f2=overviewform(request.POST)
@@ -89,6 +97,7 @@ def register_success(request):
     return render_to_response('login.html',context_instance=RequestContext(request))
 
 def index2(request):
+    
     obj=PLACEMENTS_DATA.objects.filter()
     t=get_template("index2.html")
     

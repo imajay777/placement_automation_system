@@ -56,11 +56,9 @@ ROOT_URLCONF = 'cs243.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': ['C:/Users/Hp/Desktop/cs243/templates/'],
-=======
+#<<<<<<< HEAD
         'DIRS': ['D:/websites/project/Team20cs243/templates/'],
->>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
+#>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

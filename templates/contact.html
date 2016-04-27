@@ -3,11 +3,13 @@
 
 {%block content%}
 
+
+
 <div class="form-style-5">
-<form action="/contact/" method="post" enctype="multipart/form-data" <!--onsubmit="myFunction()"--> >{% csrf_token %}
+<form action="/contact/" method="POST" enctype="multipart/form-data" <!--onsubmit="myFunction()"--> >{% csrf_token %}
+
 
 {{ form }}
-
 
 <input type="submit" value="SAVE" />
 
