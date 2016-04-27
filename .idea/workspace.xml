@@ -2,7 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99de623b-9b67-4651-b93b-1bef6d5594f9" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/credentials/static/credentials/bgi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/credentials/static/credentials/plugins/bgi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ashish.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/companysearch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/result_csearch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/studentsearch.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/css/style2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/20160322_151533.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/avatar04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/avatar2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/avatar3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/avatar5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/boxed-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/boxed-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/american-express.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/cirrus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/mastercard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/mestro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/paypal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/paypal2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/credit/visa.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/default-50x50.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/photo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/photo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/photo3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/photo4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/sagarpro.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user1-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user2-160x160.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user3-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user4-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user5-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user6-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user7-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/credentials/static/credentials/dist/img/user8-128x128.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/db.sqlite3" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/credentials/admin.py" afterPath="$PROJECT_DIR$/mysite/credentials/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/credentials/forms.py" afterPath="$PROJECT_DIR$/mysite/credentials/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/credentials/models.py" afterPath="$PROJECT_DIR$/mysite/credentials/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/credentials/views.py" afterPath="$PROJECT_DIR$/mysite/credentials/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/cs243/settings.py" afterPath="$PROJECT_DIR$/mysite/cs243/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/cs243/urls.py" afterPath="$PROJECT_DIR$/mysite/cs243/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/cs243/view.py" afterPath="$PROJECT_DIR$/mysite/cs243/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index2.html" afterPath="$PROJECT_DIR$/templates/index2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/invalid_login.html" afterPath="$PROJECT_DIR$/templates/invalid_login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/languages.html" afterPath="$PROJECT_DIR$/templates/languages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/list.html" afterPath="$PROJECT_DIR$/templates/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/overview.html" afterPath="$PROJECT_DIR$/templates/overview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/postgrad.html" afterPath="$PROJECT_DIR$/templates/postgrad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects.html" afterPath="$PROJECT_DIR$/templates/projects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sec.html" afterPath="$PROJECT_DIR$/templates/sec.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/srsec.html" afterPath="$PROJECT_DIR$/templates/srsec.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/studentprofile.html" afterPath="$PROJECT_DIR$/templates/studentprofile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/undergrad.html" afterPath="$PROJECT_DIR$/templates/undergrad.html" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
     </list>
     <ignored path="cs243.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +89,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/credentials/admin.py">
+=======
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/credentials/views.py">
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
+<<<<<<< HEAD
+=======
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/credentials/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite/credentials/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decorate.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/dist/css/decorate.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/credentials/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
@@ -82,7 +201,11 @@
         <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
+<<<<<<< HEAD
               <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+=======
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
               <folding />
             </state>
           </provider>
@@ -116,9 +239,15 @@
         <option value="$PROJECT_DIR$/templates/studentsearch.html" />
         <option value="$PROJECT_DIR$/templates/companysearch.html" />
         <option value="C:/Python27/Lib/site-packages/django/contrib/admin/options.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/mysite/credentials/models.py" />
         <option value="$PROJECT_DIR$/mysite/credentials/admin.py" />
         <option value="$PROJECT_DIR$/mysite/credentials/static/credentials/main.css" />
+=======
+        <option value="$PROJECT_DIR$/mysite/credentials/static/credentials/main.css" />
+        <option value="$PROJECT_DIR$/mysite/credentials/models.py" />
+        <option value="$PROJECT_DIR$/mysite/credentials/admin.py" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
         <option value="$PROJECT_DIR$/mysite/credentials/forms.py" />
       </list>
     </option>
@@ -439,6 +568,81 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT USER_OBJECT="mysite">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="credentials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="credentials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dist">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cs243">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cs243">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="mysite">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="credentials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="credentials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dist">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="css">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cs243">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cs243">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
             <PATH_ELEMENT USER_OBJECT=".idea">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -451,7 +655,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="sshConsole" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../backup" />
+=======
+    <property name="last_opened_file_path" value="C:/Python27/Lib/sqlite3/__init__.py" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -729,14 +937,22 @@
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2961832" sideWeight="0.4914842" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28244275" sideWeight="0.4914842" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34477124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34313726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2778626" sideWeight="0.50851583" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1062,12 +1278,20 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/mysite/credentials/forms.py">
+=======
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/views.py">
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#0#24#0" expanded="true" />
+=======
+            <element signature="e#0#35#0" expanded="true" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           </folding>
         </state>
       </provider>
@@ -1090,30 +1314,52 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/dist/css/decorate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/mysite/credentials/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1130,10 +1376,27 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/mysite/credentials/static/credentials/dist/css/decorate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1148,6 +1411,24 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/credentials/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
           </folding>
         </state>
       </provider>

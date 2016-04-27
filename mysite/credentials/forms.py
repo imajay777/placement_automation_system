@@ -16,7 +16,11 @@ class MyRegistrationForm(UserCreationForm):
 
     class Meta:
         model=User
+<<<<<<< HEAD
         widgets={'user_type':Textarea(attrs={'placeholder':'Student_or_Company','cols':40, 'rows':1}),'date_of_birth':Textarea(attrs={'placeholder':'mm/dd/yyyy','cols':40, 'rows':1}),'password1':Textarea(attrs={'placeholder':'password','cols': 70, 'rows': 1}),'password2':Textarea(attrs={'placeholder':'confirm password','cols': 70, 'rows': 1}),'email':Textarea(attrs={'placeholder':'Email','cols': 70, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 70, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 70, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 70, 'rows': 1})}
+=======
+        widgets={'date_of_birth':Textarea(attrs={'placeholder':'dd/mm/yyyy','cols':40, 'rows':1}),'email':Textarea(attrs={'placeholder':'Email','cols': 70, 'rows': 1}),'username':Textarea(attrs={'placeholder':'Username','cols': 70, 'rows': 1}),'first_name':Textarea(attrs={'placeholder':'First Name','cols': 70, 'rows': 1}),'last_name':Textarea(attrs={'placeholder':'Last Name','cols': 70, 'rows': 1})}
+>>>>>>> 8d74eee22476b8f4b0677730f130df1606cba7ca
         fields=['username','first_name','last_name','email','password1','password2','user_type','date_of_birth']
         
     def save(self,commit=True):
